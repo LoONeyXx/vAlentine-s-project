@@ -128,7 +128,9 @@ body {
 
 
   .header__menu {}
-
+  .header__list {
+    display: BLOCK;
+  }
 
 
 
@@ -595,12 +597,24 @@ body {
 
   .header__menu[style="display: block;"] {
     left:0;
-   
+    animation: left .1s linear 0s;
   }
 
   .header__menu[style="display: none;"] {
+   
     left:-95%;
   }
+
+  @keyframes left {
+    0%{
+      left:-95%;
+    }
+    100% {
+      left:0;
+    }
+  }
+
+
   .header__menu{
     display: none;
     position: fixed;
@@ -611,7 +625,7 @@ body {
     background-color:#2F6FB6;
     padding: 70px 0 0 0;
     border-bottom-right-radius: 20px;
-    transition: all 1s linear;
+   
   }
 
   .header__list {

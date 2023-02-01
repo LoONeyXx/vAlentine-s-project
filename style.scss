@@ -226,7 +226,8 @@ body {
 
   .lead__image {
     object-fit: cover;
-    @include adaptiv-size(width, 400, 780, 1, 768, 1440);
+    @include adaptiv-size(width, 400, 780, 0.7, 768, 1440);
+    max-width: 780px;
   }
 
   .lead__image-zone {}

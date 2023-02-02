@@ -81,6 +81,7 @@ body {
 }
 
 .header__list {
+  display: flex;
   margin: 0;
   padding: 0;
 }
@@ -133,7 +134,7 @@ body {
     text-align: right;
   }
   .header__list {
-    display: BLOCK;
+    display: flex;
   }
   .header__burger {
     display: none;

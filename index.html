@@ -303,9 +303,15 @@
     <div class="footer__product">
       <h2 class="footer__title">Продукты</h2>
       <ul class="footer__product-list">
-        <li class="footer__product-item"><a href="" class="link">SMT 120V</a></l i>
-        <li class="footer__product-item"><a href="" class="link">Реагентные диски</a></l i>
-        <li class="footer__product-item"><a href="" class="link">VG2</a></l i>
+        <li class="footer__product-item">
+          <p id="buttonSTM120V" class="link">SMT 120V</p>
+          </l i>
+        <li class="footer__product-item">
+          <p id="buttonReagents" class="link">Реагентные диски</p>
+          </l i>
+        <li class="footer__product-item">
+          <p id="buttonVG2" class="link">VG2</p>
+          </l i>
       </ul>
     </div>
     <div class="footer__contacts">
@@ -394,8 +400,6 @@
   </section>
   <script>
 
-
-
     function toggleToggle() {
       menuButton.style.transform = '';
     };
@@ -427,15 +431,6 @@
       }
     })
 
-    // document.onclick = () => {
-    //   if (menu.style.display === 'block') {
-    //     menuButton.style.transform = '';
-    //     menu.style.display = 'none';
-    //   }
-
-    // }
-
-
     let image = document.querySelector('.types__image');
     let degrees = 0;
 
@@ -462,18 +457,26 @@
       }
     }
 
-    var buttonStm = document.querySelector('#buttonSTM120V');
-    var products = document.querySelector('#products');
+    var buttonStm = document.querySelectorAll('#buttonSTM120V').forEach((el) => {
+      el.addEventListener('click', () => {
+        scrollTo(products);
+      })
+      var products = document.querySelector('#products');
+    });
 
-    var buttonReagents = document.querySelector('#buttonReagents');
-    var reagents = document.querySelector('#reagents');
+    var buttonStm = document.querySelectorAll('#buttonReagents').forEach((el) => {
+      el.addEventListener('click', () => {
+        scrollTo(reagents);
+      })
+      var reagents = document.querySelector('#reagents');
+    });
 
-    var buttonVG2 = document.querySelector('#buttonVG2');
-    var vG2 = document.querySelector('#VG2');
-
-    buttonStm.addEventListener('click', () => {
-      scrollTo(products);
-    })
+    var buttonStm = document.querySelectorAll('#buttonVG2').forEach((el) => {
+      el.addEventListener('click', () => {
+        scrollTo(vG2);
+      })
+      var vG2 = document.querySelector('#VG2');
+    });
 
     buttonReagents.addEventListener('click', () => {
       scrollTo(reagents);

@@ -886,6 +886,7 @@ body {
     text-decoration: none;
     transition: opacity 0.2s linear;
     margin: 0;
+    cursor: pointer;
   }
   .link:hover {
     opacity: 0.3;

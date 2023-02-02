@@ -553,10 +553,12 @@ body {
     align-items: end;
   }
   .header__list li {
-    margin: 0 0 20px 30px;
+    margin: 0;
+    padding-left: 10px;
+    max-width: 170px;
     flex-direction: column;
     gap: 30px;
-    font-size: 26px;
+    font-size: calc(20px + 10.2 * ((100vw - 320px) / 768));
   }
   .header__text:first-child {
     text-align: right;

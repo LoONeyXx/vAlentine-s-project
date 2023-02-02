@@ -45,6 +45,23 @@ body {
   padding: 0 10px;
 }
 
+.link {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s linear;
+  margin: 0;
+  cursor: pointer;
+}
+
+.link:hover {
+  opacity: 0.3;
+}
+
+.link:visited, .link:active {
+  color: white;
+  text-decoration: none;
+}
+
 .header__body {
   position: relative;
   display: flex;
@@ -880,20 +897,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 35px;
-  }
-  .link {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.2s linear;
-    margin: 0;
-    cursor: pointer;
-  }
-  .link:hover {
-    opacity: 0.3;
-  }
-  .link:visited, .link:active {
-    color: white;
-    text-decoration: none;
   }
   .footer__list {
     color: white;

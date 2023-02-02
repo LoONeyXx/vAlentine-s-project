@@ -17,9 +17,9 @@
           <nav class="header__menu">
             <ul class="header__list">
               <li>
-                <p  id="buttonSTM120V" class="header__link link">SMT120V</p>
-                <p  id="buttonReagents" class="header__link link">Реагентные диски</p>
-                <p  id="buttonVG2" class="header__link link">VG2</p>
+                <p id="buttonSTM120V" class="header__link link">SMT120V</p>
+                <p id="buttonReagents" class="header__link link">Реагентные диски</p>
+                <p id="buttonVG2" class="header__link link">VG2</p>
               </li>
             </ul>
           </nav>
@@ -203,7 +203,7 @@
         <img class="types__image" src="./images/Types-table.png" alt="">
         <button class="button types__button">Оставить заявку на консультацию</button>
       </section>
-      <section  id="VG2" class="analyzatorVG2">
+      <section id="VG2" class="analyzatorVG2">
         <h2 class="analyzatorVG2__title">VG2 анализатор</h2>
         <p class="analyzatorVG2__subtitle">Благодаря инновациям Seamaty предоставляет новое диагностическое решение для
           ветеринаров. Анализатор VG2 сочетает в себе флуоресцентный иммуноанализ, анализ газа крови и электролитов
@@ -393,15 +393,29 @@
       </div>
   </section>
   <script>
+
+
+
+    function toggleToggle() {
+      menuButton.style.transform = '';
+    };
+
+    function toggleMenu() {
+      menu.style.display = 'none';
+    };
+
+    function closeBurger() {
+      if (menu.style.display === 'block') {
+
+      }
+    }
+
+
+
     const menuButton = document.querySelector('.header__burger');
     const menu = document.querySelector('.header__menu');
     const menuList = document.querySelector('.header__list');
     menuButton.addEventListener('click', function () {
-      // if (menuList.style.display === 'block') {
-      //   menuList.style.display = 'none';
-      // } else {
-      //   menuList.style.display = 'block';
-      // }
       if (menu.style.display === 'block' || menuList.style.display === 'block') {
         menu.style.display = 'none';
         menuList.style.display = 'none'
@@ -412,18 +426,16 @@
         menuButton.style.transform = 'rotate(90deg)';
       }
     })
-    // let img = document.querySelector('.types__image');
-    // let zoom = 1.5;
 
-    // img.addEventListener('click', () => {
-    //   if (zoom > 1) {
-    //     zoom = 1;
-    //     img.style.width = '100%';
-    //   } else {
-    //     zoom = 1.5;
-    //     img.style.width = '50%';
+    // document.onclick = () => {
+    //   if (menu.style.display === 'block') {
+    //     menuButton.style.transform = '';
+    //     menu.style.display = 'none';
     //   }
-    // })
+
+    // }
+
+
     let image = document.querySelector('.types__image');
     let degrees = 0;
 
@@ -443,10 +455,11 @@
         top: element.offsetTop - 100,
         behavior: 'smooth'
       })
-      if (menu.style.display === 'block'){
+      if (menu.style.display === 'block') {
         menu.style.display = '';
-        menuList.style.display = '';  
-        menuButton.style.transform = '';    }
+        menuList.style.display = '';
+        menuButton.style.transform = '';
+      }
     }
 
     var buttonStm = document.querySelector('#buttonSTM120V');
@@ -454,7 +467,7 @@
 
     var buttonReagents = document.querySelector('#buttonReagents');
     var reagents = document.querySelector('#reagents');
- 
+
     var buttonVG2 = document.querySelector('#buttonVG2');
     var vG2 = document.querySelector('#VG2');
 
@@ -469,6 +482,8 @@
     buttonVG2.addEventListener('click', () => {
       scrollTo(vG2);
     })
+
+
   </script>
 </body>
 

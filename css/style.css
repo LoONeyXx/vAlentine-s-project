@@ -846,7 +846,11 @@ body {
   .footer__product {
     font-size: 14px;
     line-height: 17px;
-    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
   }
   .footer__title {
     margin: 0;
@@ -857,14 +861,20 @@ body {
     text-align: center;
   }
   .footer__product-list {
-    max-width: 100px;
     list-style: none;
     color: white;
     padding: 0;
-    margin: 38px 0 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 25px;
+  }
+  .footer__product-list li {
+    width: 70px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .footer__contacts {
     display: flex;

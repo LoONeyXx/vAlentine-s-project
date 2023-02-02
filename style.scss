@@ -1107,6 +1107,11 @@ body {
     opacity: 0.3;
   }
 
+  .link:checked, .link:active{
+    color: white;
+    text-decoration: none;
+  }
+
   .footer__list {
     color: white;
     margin: 0;

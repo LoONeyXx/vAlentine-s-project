@@ -58,7 +58,8 @@ body {
 }
 
 .link:visited,
-.link:active {
+.link:active,
+.link:link {
   color: white;
   text-decoration: none;
 }

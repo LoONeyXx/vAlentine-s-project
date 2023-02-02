@@ -362,8 +362,7 @@
         <li class="footer__contact">
           <p class="footer__contact-text">Казахстан</p>
           <p class="footer__contact-text">Гульмира</p>
-          <a href="mailto:gulmira_sharipova82@mail.ru"
-            class="link footer__contact-text">gulmira_sharipova82@mail.ru</a>
+          <a href="mailto:gulmira_sharipova82@mail.ru" class="link footer__contact-text">gulmira_sharipova82@mail.ru</a>
           <a href="tel:+77057462171" class="link footer__contact-number">
             +7 (705) 746 21 71
           </a>
@@ -371,8 +370,7 @@
         <li class="footer__contact">
           <p class="footer__contact-text">Армения</p>
           <p class="footer__contact-text">Александр</p>
-          <a href="mailto:seamaty.soloviev@gmail.com"
-            class="link footer__contact-text">seamaty.soloviev@gmail.com</a>
+          <a href="mailto:seamaty.soloviev@gmail.com" class="link footer__contact-text">seamaty.soloviev@gmail.com</a>
           <a href="tel:+37499011558" class="link footer__contact-number">
             +374 99 011 558
           </a>
@@ -410,7 +408,30 @@
         menu.style.display = 'block';
       }
     })
+    // let img = document.querySelector('.types__image');
+    // let zoom = 1.5;
 
+    // img.addEventListener('click', () => {
+    //   if (zoom > 1) {
+    //     zoom = 1;
+    //     img.style.width = '100%';
+    //   } else {
+    //     zoom = 1.5;
+    //     img.style.width = '50%';
+    //   }
+    // })
+    let image = document.querySelector('.types__image');
+    let degrees = 0;
+
+    image.addEventListener('click', () => {
+      if (degrees === 0) {
+        degrees = 1;
+        image.style.transform = 'rotate(90deg) scale(1.5)';
+      } else if (degrees === 1) {
+        degrees = 0;
+        image.style.transform = '';
+      }
+    });
   </script>
 </body>
 

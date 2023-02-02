@@ -543,8 +543,8 @@ body {
     background-color: #2F6FB6;
     padding: 100px 0 0 0;
     border-bottom-right-radius: 20px;
-    -webkit-animation: right 0.1s linear 0s;
-            animation: right 0.1s linear 0s;
+    -webkit-animation: right 0.2s linear 0s;
+            animation: right 0.2s linear 0s;
   }
   .header__list {
     display: none;

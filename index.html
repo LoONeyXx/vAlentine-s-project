@@ -421,11 +421,16 @@
     const menu = document.querySelector('.header__menu');
     const menuList = document.querySelector('.header__list');
     menuButton.addEventListener('click', function () {
-      if (menu.style.display === 'block' || menuList.style.display === 'block') {
-        menu.style.display = '';
-        menuList.style.display = ''
-        menuButton.style.transform = '';
+      if (menu.style.display === 'block' || menuList.style.display === 'block' || menu.style.left === '0') {
+        menu.style.left = '-95%'
+        setTimeout(function () {
+          menu.style.display = '';
+          menuList.style.display = ''
+          menuButton.style.transform = '';
+        }, 100);
+
       } else {
+        menu.style.left = '';
         menu.style.display = 'block';
         menuList.style.display = 'block'
         menuButton.style.transform = 'rotate(90deg)';
@@ -452,9 +457,12 @@
         behavior: 'smooth'
       })
       if (menu.style.display === 'block') {
-        menu.style.display = '';
-        menuList.style.display = '';
-        menuButton.style.transform = '';
+        menu.style.left = '-95%'
+        setTimeout(function () {
+          menu.style.display = '';
+          menuList.style.display = ''
+          menuButton.style.transform = '';
+        }, 100);
       }
     }
 
@@ -487,10 +495,10 @@
     //   scrollTo(vG2);
     // });
 
-    let viewportWidth =  document.documentElement.clientWidth;
+    let viewportWidth = document.documentElement.clientWidth;
     let viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
-    
+
     if (document.documentElement.clientWidth >= 768) {
       menuList.style.display = 'flex';
       console.log(window.innerWidth);

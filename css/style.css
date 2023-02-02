@@ -69,6 +69,7 @@ body {
 .header__link {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .header__contacts {
@@ -467,32 +468,12 @@ body {
     font-size: 40px;
     z-index: 5;
     cursor: pointer;
+    transition: transform 0.1s linear 0s;
   }
   .header__menu[style="display: block;"] {
-    left: 0;
+    top: 0;
     -webkit-animation: left 0.1s linear 0s;
             animation: left 0.1s linear 0s;
-  }
-  .header__menu[style="display: none;"] {
-    -webkit-animation: right 0.1s both 0s;
-            animation: right 0.1s both 0s;
-    left: -95%;
-  }
-  @-webkit-keyframes right {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: -95%;
-    }
-  }
-  @keyframes right {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: -95%;
-    }
   }
   @-webkit-keyframes left {
     0% {
@@ -510,16 +491,35 @@ body {
       left: 0;
     }
   }
+  @-webkit-keyframes right {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -95%;
+    }
+  }
+  @keyframes right {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -95%;
+    }
+  }
   .header__menu {
     display: none;
     position: fixed;
     z-index: 4;
     top: 0;
+    left: 0;
     width: 50%;
     height: 300px;
     background-color: #2F6FB6;
     padding: 100px 0 0 0;
     border-bottom-right-radius: 20px;
+    -webkit-animation: right 0.1s linear 0s;
+            animation: right 0.1s linear 0s;
   }
   .header__list {
     display: none;
@@ -873,6 +873,7 @@ body {
     color: white;
     text-decoration: none;
     transition: opacity 0.2s linear;
+    margin: 0;
   }
   .link:hover {
     opacity: 0.3;

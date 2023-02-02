@@ -17,9 +17,9 @@
           <nav class="header__menu">
             <ul class="header__list">
               <li>
-                <a href="" class="header__link link">SMT120V</a>
-                <a href="" class="header__link link">Реагентные диски</a>
-                <a href="" class="header__link link">VG2</a>
+                <p  id="buttonSTM120V" class="header__link link">SMT120V</p>
+                <p  id="buttonReagents" class="header__link link">Реагентные диски</p>
+                <p  id="buttonVG2" class="header__link link">VG2</p>
               </li>
             </ul>
           </nav>
@@ -52,7 +52,7 @@
         </div>
         <div class="lead__image-zone"><img class="lead__image" src="./images/lead__image.png" alt=""></div>
       </section>
-      <section class="products">
+      <section id="products" class="products">
         <h2 class="products__title">SMT-120V</h2>
         <p class="products__subtitle">Ветеринарный автоматический биохимический анализатор Seamaty</p>
         <h3 class="product__list-title">3 простых шага проведения анализа:</h3>
@@ -187,7 +187,7 @@
         </ul>
         <button class="button attributes__button">Оставить заявку на консультацию</button>
       </section>
-      <section class="reagents">
+      <section id="reagents" class="reagents">
         <h2 class="reagents__title">Реагентные диски</h2>
         <p class="reagents__subtitle"><span class="reagents__span">Реагентные диски Seamaty</span>(роторы) содержат
           интегрированные компоненты оптико-механических функций и сотрудничают с прибором для участия в каждом этапе
@@ -203,7 +203,7 @@
         <img class="types__image" src="./images/Types-table.png" alt="">
         <button class="button types__button">Оставить заявку на консультацию</button>
       </section>
-      <section class="analyzatorVG2">
+      <section  id="VG2" class="analyzatorVG2">
         <h2 class="analyzatorVG2__title">VG2 анализатор</h2>
         <p class="analyzatorVG2__subtitle">Благодаря инновациям Seamaty предоставляет новое диагностическое решение для
           ветеринаров. Анализатор VG2 сочетает в себе флуоресцентный иммуноанализ, анализ газа крови и электролитов
@@ -397,15 +397,19 @@
     const menu = document.querySelector('.header__menu');
     const menuList = document.querySelector('.header__list');
     menuButton.addEventListener('click', function () {
-      if (menuList.style.display === 'block') {
-        menuList.style.display = 'none';
-      } else {
-        menuList.style.display = 'block';
-      }
-      if (menu.style.display === 'block') {
+      // if (menuList.style.display === 'block') {
+      //   menuList.style.display = 'none';
+      // } else {
+      //   menuList.style.display = 'block';
+      // }
+      if (menu.style.display === 'block' || menuList.style.display === 'block') {
         menu.style.display = 'none';
+        menuList.style.display = 'none'
+        menuButton.style.transform = '';
       } else {
         menu.style.display = 'block';
+        menuList.style.display = 'block'
+        menuButton.style.transform = 'rotate(90deg)';
       }
     })
     // let img = document.querySelector('.types__image');
@@ -432,6 +436,39 @@
         image.style.transform = '';
       }
     });
+
+    function scrollTo(element) {
+      window.scroll({
+        left: 0,
+        top: element.offsetTop - 100,
+        behavior: 'smooth'
+      })
+      if (menu.style.display === 'block'){
+        menu.style.display = '';
+        menuList.style.display = '';  
+        menuButton.style.transform = '';    }
+    }
+
+    var buttonStm = document.querySelector('#buttonSTM120V');
+    var products = document.querySelector('#products');
+
+    var buttonReagents = document.querySelector('#buttonReagents');
+    var reagents = document.querySelector('#reagents');
+ 
+    var buttonVG2 = document.querySelector('#buttonVG2');
+    var vG2 = document.querySelector('#VG2');
+
+    buttonStm.addEventListener('click', () => {
+      scrollTo(products);
+    })
+
+    buttonReagents.addEventListener('click', () => {
+      scrollTo(reagents);
+    })
+
+    buttonVG2.addEventListener('click', () => {
+      scrollTo(vG2);
+    })
   </script>
 </body>
 

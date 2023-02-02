@@ -1107,7 +1107,7 @@ body {
     opacity: 0.3;
   }
 
-  .link:checked, .link:active{
+  .link:visited, .link:active{
     color: white;
     text-decoration: none;
   }

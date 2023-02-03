@@ -306,15 +306,15 @@
       <span id="form-btn-close" class="form__close-btn">X</span>
       <div class="form__group">
         <label for="name" class="form__label">Имя</label>
-        <input type="text" id="name" class="form__input" placeholder="Введите имя">
+        <input type="text" id="name" class="form__input form__input-text" placeholder="Введите имя">
       </div>
       <div class="form__group">
         <label for="email" class="form__label">Почта</label>
-        <input type="email" id="email" class="form__input" placeholder="Введите почту">
+        <input type="email" id="email" class="form__input form__input-email" placeholder="Введите почту">
       </div>
       <div class="form__group">
         <label for="phone" class="form__label">Телефон</label>
-        <input type="tel" id="phone" class="form__input" placeholder="Введите телефон">
+        <input type="tel" id="phone" class="form__input form__input-phone" placeholder="Введите телефон">
       </div>
       <input type="submit" class="form__submit" value="Отправить">
     </form>
@@ -436,6 +436,7 @@
 
 
 
+
     const menuButton = document.querySelector('.header__burger');
     const menu = document.querySelector('.header__menu');
     const menuList = document.querySelector('.header__list');
@@ -459,6 +460,31 @@
 
     }
 
+    function validateForm() {
+      const name = document.querySelector('.form__input-text');
+      const email = document.querySelector('.form__input-email');
+
+      const nameRegex = /^[а-яА-Я]+$/;
+      const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      if (!nameRegex.test(name.value)) {
+        alert('Имя должно содержать только русские буквы.');
+        return false;
+      }
+
+      if (!emailRegex.test(email.value)) {
+        alert('Введена некорректная почта.');
+        return false;
+      }
+
+      if (!phoneRegex.test(phone.value)) {
+        alert('Введите номер телефона в формате +7(***)***-**-**.');
+        return false;
+      }
+
+      return true;
+    }
+
     const form = document.querySelector('#form')
     const body = document.querySelector('section')
     const buttonToForm = document.querySelectorAll('#button-to-form').forEach((el) => {
@@ -475,8 +501,21 @@
       form.style.bottom = '-125%'
     })
 
+    const submit = document.querySelector('.form__submit');
+    const formIntput = document.querySelector('.form__input')
+    submit.addEventListener('click', () => {
+      validateForm()
+    })
 
-
+    document.getElementById('form').addEventListener(
+      "submit",
+      function (event) {
+        if (validateForm() === false) {
+          event.preventDefault();
+        }
+      },
+      false
+    );
     menuButton.addEventListener('click', function () {
       if (menu.style.display === 'block' || menuList.style.display === 'block' || menu.style.left === '0') {
         menu.style.left = '-95%'

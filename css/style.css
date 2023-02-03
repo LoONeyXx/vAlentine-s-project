@@ -40,11 +40,22 @@
   padding: 0 10px;
 }
 
-.hover-effect:hover {
-  background-color: rgba(16, 98, 223, 0.8);
-  cursor: pointer;
+.hover-effect {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
+.hover-effect:active {
+  background-color: rgba(16, 98, 223, 0.8);
+}
+
+@media (hover: hover) {
+  .hover-effect:hover {
+    background-color: rgba(16, 98, 223, 0.8);
+    cursor: pointer;
+  }
+}
 .link {
   color: white;
   text-decoration: none;
@@ -53,10 +64,11 @@
   cursor: pointer;
 }
 
-.link:hover {
-  opacity: 0.3;
+@media (hover: hover) {
+  .link:hover {
+    opacity: 0.3;
+  }
 }
-
 .link:visited,
 .link:active,
 .link:link {
@@ -785,11 +797,14 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     padding-bottom: 5px;
   }
-  .hide-mobile, .hide-mobile-second {
+  .hide-mobile,
+.hide-mobile-second {
     display: none;
   }
-  .hide-mobile-button, .hide-mobile-button-second {
+  .hide-mobile-button,
+.hide-mobile-button-second {
     width: 100%;
+    font-size: 16px;
     background-color: #2F6FB6;
     border: none;
     border-radius: 10px;

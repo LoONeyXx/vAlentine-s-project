@@ -37,6 +37,7 @@
   appearance: none;
   margin: 0 auto;
   transition: bottom .3s linear;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
 }
 
 .form__group {
@@ -132,6 +133,7 @@
   border-bottom-left-radius: 5%;
   border-bottom-right-radius: 5%;
   color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -144,6 +146,7 @@
   height: 100%;
   background-color: #2F6FB6;
   z-index: 3;
+
 }
 
 .container {
@@ -795,6 +798,7 @@
     padding: 100px 0 0 0;
     border-bottom-right-radius: 20px;
     animation: right .2s linear 0s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.12);
 
   }
 

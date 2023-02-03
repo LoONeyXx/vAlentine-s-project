@@ -30,6 +30,7 @@
           appearance: none;
   margin: 0 auto;
   transition: bottom 0.3s linear;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
 }
 
 .form__group {
@@ -129,6 +130,7 @@
   border-bottom-left-radius: 5%;
   border-bottom-right-radius: 5%;
   color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 }
 
 .header:before {
@@ -673,6 +675,7 @@
     border-bottom-right-radius: 20px;
     -webkit-animation: right 0.2s linear 0s;
             animation: right 0.2s linear 0s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.12);
   }
   .header__list {
     display: none;

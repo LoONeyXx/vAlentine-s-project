@@ -501,13 +501,10 @@
       form.style.bottom = '-125%'
     })
 
-    const submit = document.querySelector('.form__submit');
-    const formIntput = document.querySelector('.form__input')
-    submit.addEventListener('click', () => {
-      validateForm()
-    })
 
-    document.getElementById('form').addEventListener(
+    const formIntput = document.querySelector('.form__input')
+
+    form.addEventListener(
       "submit",
       function (event) {
         if (validateForm() === false) {
@@ -516,6 +513,7 @@
       },
       false
     );
+
     menuButton.addEventListener('click', function () {
       if (menu.style.display === 'block' || menuList.style.display === 'block' || menu.style.left === '0') {
         menu.style.left = '-95%'

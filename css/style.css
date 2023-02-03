@@ -795,6 +795,7 @@
     border-radius: 10px;
     cursor: pointer;
     padding: 10px;
+    color: white;
   }
   .attributes__list-title {
     margin: 0;

@@ -36,8 +36,7 @@
 
     </header>
   </div>
-  <main class="content">
-    <div class="container">
+  <main class="container">
       <section class="lead">
         <div class="lead__header-zone">
           <p class="lead__dealer">Официальный дилер компании seamaty</p>
@@ -49,29 +48,30 @@
             <li class="lead__item">Гарантия <span class="lead__span">36 месяцев</span></li>
             <li class="lead__item">Сотрудничество с компанией <span class="lead__span">Seamaty</span> напрямую</li>
           </ul>
-          <button class="button lead__button hover-effect">Оставить заявку на консультацию</button>
+          <button id="button-to-form" class="button lead__button hover-effect">Оставить заявку на консультацию</button>
         </div>
         <div class="lead__image-zone"><img class="lead__image" src="./images/lead__image.png" alt=""></div>
       </section>
+
       <section id="products" class="products">
         <h2 class="products__title">SMT-120V</h2>
         <p class="products__subtitle">Ветеринарный автоматический биохимический анализатор Seamaty</p>
-        <h3 class="product__list-title">3 простых шага проведения анализа:</h3>
-        <ul class="product__table">
+        <h3 class="products__list-title">3 простых шага проведения анализа:</h3>
+        <ul class="products__table">
           <li>
-            <img src="./images/1_item.png" alt="" class="table__image">
-            <div class="table__title">Шаг 1</div>
-            <div class="table__subtitle">Поместите биоматериал в ротор</div>
+            <img src="./images/1_item.png" alt="" class="products__table-image">
+            <div class="products__table-title">Шаг 1</div>
+            <div class="products__table-subtitle">Поместите биоматериал в ротор</div>
           </li>
           <li>
-            <img src="./images/2_item.png" alt="" class="table__image">
-            <div class="table__title">Шаг 2</div>
-            <div class="table__subtitle">Загрузите ротор с образцом в анализатор</div>
+            <img src="./images/2_item.png" alt="" class="products__table-image">
+            <div class="products__table-title">Шаг 2</div>
+            <div class="products__table-subtitle">Загрузите ротор с образцом в анализатор</div>
           </li>
           <li>
-            <img src="./images/3_item.png" alt="" class="table__image">
-            <div class="table__title">Шаг 3</div>
-            <div class="table__subtitle">Получите результат</div>
+            <img src="./images/3_item.png" alt="" class="products__table-image">
+            <div class="products__table-title">Шаг 3</div>
+            <div class="products__table-subtitle">Получите результат</div>
           </li>
         </ul>
       </section>
@@ -187,7 +187,8 @@
           </li>
         </ul>
         <button id="attributes-button" class="hide-mobile-button hover-effect">Подробнее</button>
-        <button class="button attributes__button hover-effect">Оставить заявку на консультацию</button>
+        <button id="button-to-form" class="button attributes__button hover-effect">Оставить заявку на
+          консультацию</button>
       </section>
       <section id="reagents" class="reagents">
         <h2 class="reagents__title">Реагентные диски</h2>
@@ -203,7 +204,7 @@
       <section class="types">
         <h2 class="types__title">Типы реагентных дисков с показателями:</h2>
         <img class="types__image" src="./images/Types-table.png" alt="">
-        <button class="button types__button hover-effect">Оставить заявку на консультацию</button>
+        <button id="button-to-form" class="button types__button hover-effect">Оставить заявку на консультацию</button>
       </section>
       <section id="VG2" class="analyzatorVG2">
         <h2 class="analyzatorVG2__title">VG2 анализатор</h2>
@@ -298,10 +299,26 @@
           </li>
         </ul>
         <button id="attributes-button-second" class="hide-mobile-button-second hover-effect">Подробнее</button>
-        <button class="button attributes__button hover-effect">Оставить заявку на консультацию</button>
+        <button id="button-to-form" class="button attributes__button hover-effect">Оставить заявку на
+          консультацию</button>
       </section>
-    </div>
-  </main class="content">
+    <form id="form" class="form">
+      <span class="form__close-btn">X</span>
+      <div class="form__group">
+        <label for="name" class="form__label">Имя</label>
+        <input type="text" id="name" class="form__input" placeholder="Введите имя">
+      </div>
+      <div class="form__group">
+        <label for="email" class="form__label">Почта</label>
+        <input type="email" id="email" class="form__input" placeholder="Введите почту">
+      </div>
+      <div class="form__group">
+        <label for="phone" class="form__label">Телефон</label>
+        <input type="tel" id="phone" class="form__input" placeholder="Введите телефон">
+      </div>
+      <input type="submit" class="form__submit" value="Отправить">
+    </form>
+  </main>
   <section class="footer">
     <div class="footer__product">
       <h2 class="footer__title">Продукты</h2>
@@ -426,7 +443,6 @@
     const hidedTextSecond = document.querySelectorAll('.hide-mobile-second');
 
 
-
     function displayNone(el) {
       if (el[1].style.display == '') {
         el.forEach((e) => {
@@ -442,6 +458,23 @@
       }
 
     }
+
+    const form = document.querySelector('#form')
+    
+    const buttonToForm = document.querySelectorAll('#button-to-form').forEach((el) => {
+      el.addEventListener('click', function () {
+        if (form.style.left = '-300') {
+          form.style.left = '0'
+        }
+        else {
+          form.style.left = '-300'
+        }
+      })
+    })
+
+
+
+
 
 
     menuButton.addEventListener('click', function () {
@@ -538,9 +571,9 @@
 
 
     })
-    const cutButtonSecond = document.querySelectorAll('.hide-mobile-button-second').forEach((el) => {
 
-      var buttonCoordSecond = document.querySelector('#attributes-button-second');
+    const cutButtonSecond = document.querySelectorAll('.hide-mobile-button-second').forEach((el) => {
+      let buttonCoordSecond = document.querySelector('#attributes-button-second');
       el.addEventListener('click', () => {
         displayNone(hidedTextSecond)
         if (buttonCoordSecond.innerHTML === 'Подробнее') {

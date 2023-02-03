@@ -1,0 +1,16 @@
+.hover-effect {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hover-effect:active {
+  background-color: rgba(16, 98, 223, 0.8);
+}
+
+@media (hover: hover) {
+  .hover-effect:hover {
+    background-color: rgba(16, 98, 223, 0.8);
+    cursor: pointer;
+  }
+}

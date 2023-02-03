@@ -1,0 +1,23 @@
+@media screen and (min-width:768px) {
+  .hide-mobile-button,
+  .hide-mobile-button-second {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:767px) {
+
+  .hide-mobile-button,
+  .hide-mobile-button-second {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    background-color: #2F6FB6;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+  }
+}

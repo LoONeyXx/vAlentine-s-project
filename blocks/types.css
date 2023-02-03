@@ -1,0 +1,20 @@
+@media screen and (min-width:768px) {
+  .types {
+    margin: 265px auto 0;
+  }
+  .types__title {
+    text-align: center;
+  }
+  .types__image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: 0.1s linear;
+    max-width: 85%;
+    display: block;
+    margin: 0 auto;
+  }
+  .types__button {
+    margin: 98px auto 0;
+    display: block;
+  }
+}

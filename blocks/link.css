@@ -1,7 +1,7 @@
 .link {
 	color: white;
 	text-decoration: none;
-	transition: opacity 0.2s linear;
+	transition: opacity 0.1s linear;
 	margin: 0;
 	cursor: pointer;
 }

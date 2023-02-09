@@ -14,6 +14,11 @@
     line-height: 1.21025;
   }
 
+  .reagents__subtitle {
+    margin: 0;
+    text-align: center;
+  }
+
   .reagents__image {
     margin: 41px 0 55px;
     max-width: 100%;

@@ -16,12 +16,14 @@
 }
 
 .attributes__list li {
+
 	display: flex;
 	align-items: center;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .attributes__list-title {
+	font-family: 'Inter', Arial, Helvetica, sans-serif;
 	margin: 0;
 	width: 257px;
 	font-size: 14px;
@@ -29,6 +31,8 @@
 }
 
 .attributes__list-subtitle {
+	font-family: 'Inter', Arial, Helvetica, sans-serif;
+
 	margin: 0;
 	font-size: 14px;
 }

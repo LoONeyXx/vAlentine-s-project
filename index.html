@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <title>Анализатор</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body class="page">
@@ -236,7 +237,7 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
     </section>
-    <section id="attributes" class="attributes">
+    <section" class="attributes">
       <h2 class="attributes__title">Характеристики:</h2>
       <ul class="attributes__list">
         <li>
@@ -252,72 +253,74 @@
           <p class="attributes__list-subtitle">Флуоресцентный иммунохроматографический анализ<br>Электрохимическая
             технология газа в крови</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Время тестирования</h3>
           <p class="attributes__list-subtitle">4-10 минут</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Контроль качества и калибровка</h3>
           <p class="attributes__list-subtitle">Полностью автоматическая отделка в режиме реального времени</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Дисплей</h3>
           <p class="attributes__list-subtitle">7 дюймов 800*480px</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Хранение</h3>
           <p class="attributes__list-subtitle">МАКСИМУМ 500 000</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Разъемы</h3>
           <p class="attributes__list-subtitle">4 порта USB; 1 порт LAN</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Размер</h3>
           <p class="attributes__list-subtitle">240 мм, *200 мм, *135 мм</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Вес нетто</h3>
           <p class="attributes__list-subtitle">1,95 кг</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Принтеры</h3>
           <p class="attributes__list-subtitle">Встроенные термопринтеры</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Операционная среда</h3>
           <p class="attributes__list-subtitle">Рабочая температура: 5-32°C
           </p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Влажность</h3>
           <p class="attributes__list-subtitle">≤85%</p>
         </li>
-        <li class="hide-mobile-second">
+        <li class="hide-mobile">
           <h3 class="attributes__list-title">Атмосферное давление</h3>
           <p class="attributes__list-subtitle">86,0 кПа ~ 106,0 кПа</p>
         </li>
       </ul>
-      <button id="attributes-button-second" class="hide-mobile-button-second hover-effect">Подробнее</button>
+      <button id="attributes-button" class="hide-mobile-button hover-effect">Подробнее</button>
       <button id="button-to-form" class="button attributes__button hover-effect">Оставить заявку на
         консультацию</button>
     </section>
-    <form id="form" class="form">
-      <span id="form-btn-close" class="form__close-btn">X</span>
-      <div class="form__group">
-        <label for="name" class="form__label">Имя</label>
-        <input type="text" id="name" class="form__input form__input-text" placeholder="Введите имя">
-      </div>
-      <div class="form__group">
-        <label for="email" class="form__label">Почта</label>
-        <input type="email" id="email" class="form__input form__input-email" placeholder="Введите почту">
-      </div>
-      <div class="form__group">
-        <label for="phone" class="form__label">Телефон</label>
-        <input type="tel" id="phone" class="form__input form__input-phone" placeholder="Введите телефон">
-      </div>
-      <input type="submit" class="form__submit" value="Отправить">
-    </form>
+    <section class="popup">
+      <form id="form" class="form">
+        <span id="form-btn-close" class="form__close-btn">X</span>
+        <div class="form__group">
+          <label for="name" class="form__label">Имя</label>
+          <input type="text" id="name" class="form__input form__input-text" placeholder="Введите имя">
+        </div>
+        <div class="form__group">
+          <label for="email" class="form__label">Почта</label>
+          <input type="email" id="email" class="form__input form__input-email" placeholder="Введите почту">
+        </div>
+        <div class="form__group">
+          <label for="phone" class="form__label">Телефон</label>
+          <input type="tel" id="phone" class="form__input form__input-phone" placeholder="Введите телефон">
+        </div>
+        <input type="submit" class="form__submit" value="Отправить">
+      </form>
+    </section>
   </main>
   <section class="footer">
     <div class="footer__product">
@@ -420,50 +423,15 @@
   </section>
   <script>
 
-    function toggleToggle() {
-      menuButton.style.transform = '';
-    };
-
-    function toggleMenu() {
-      menu.style.display = 'none';
-    };
-
-    function closeBurger() {
-      if (menu.style.display === 'block') {
-
-      }
-    }
-
-
-
 
     const menuButton = document.querySelector('.header__burger');
     const menu = document.querySelector('.header__menu');
     const menuList = document.querySelector('.header__list');
-    const hidedText = document.querySelectorAll('.hide-mobile');
-    const hidedTextSecond = document.querySelectorAll('.hide-mobile-second');
 
-
-    function displayNone(el) {
-      if (el[1].style.display == '') {
-        el.forEach((e) => {
-          e.style.display = 'block';
-        })
-      } else {
-        el.forEach((e) => {
-          e.style.display = '';
-        })
-        setTimeout(() => {
-
-        })
-      }
-
-    }
+    const name = document.querySelector('.form__input-text');
+    const email = document.querySelector('.form__input-email');
 
     function validateForm() {
-      const name = document.querySelector('.form__input-text');
-      const email = document.querySelector('.form__input-email');
-
       const nameRegex = /^[а-яА-Я]+$/;
       const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -484,13 +452,13 @@
 
       return true;
     }
-
+    const page = document.querySelector('.page')
     const form = document.querySelector('#form')
-    const body = document.querySelector('section')
+    const popup = document.querySelector('.popup')
     const buttonToForm = document.querySelectorAll('#button-to-form').forEach((el) => {
-      el.addEventListener('click', function () {
-        if (form.style.bottom < '0') {
-          form.style.bottom = '0';
+      el.addEventListener('click', () => {
+        if (popup.style.display !== 'flex') {
+          popup.style.display = 'flex';
         }
       })
     })
@@ -498,7 +466,11 @@
     const formButtonClose = document.querySelector('#form-btn-close');
 
     formButtonClose.addEventListener('click', () => {
-      form.style.bottom = '-125%'
+      const name = document.querySelector('.form__input-text');
+      popup.style.display = '';
+      name.value = '';
+      email.value = '';
+
     })
 
 
@@ -514,7 +486,9 @@
       false
     );
 
-    menuButton.addEventListener('click', function () {
+    /// рикпыиме
+
+    function openPopup() {
       if (menu.style.display === 'block' || menuList.style.display === 'block' || menu.style.left === '0') {
         menu.style.left = '-95%'
         setTimeout(function () {
@@ -522,14 +496,19 @@
           menuList.style.display = ''
           menuButton.style.transform = '';
         }, 100);
-
       } else {
         menu.style.left = '';
         menu.style.display = 'block';
         menuList.style.display = 'block'
         menuButton.style.transform = 'rotate(90deg)';
       }
-    })
+    }
+
+
+    menuButton.addEventListener('click', openPopup)
+
+
+    //  Поворот изображения при нажатии на нее
 
     let image = document.querySelector('.types__image');
     let degrees = 0;
@@ -543,7 +522,7 @@
         image.style.transform = '';
       }
     });
-
+//                                  Scroll экрана при нажатии на пункт меню к его расположению на экране
     function scrollTo(element, num) {
       window.scroll({
         left: 0,
@@ -582,9 +561,11 @@
     });
 
 
+
+    // Появление меню для мобильныйх устройств на заданной ширине
+
     let viewportWidth = document.documentElement.clientWidth;
     let viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-
 
     if (document.documentElement.clientWidth >= 768) {
       menuList.style.display = 'flex';
@@ -593,37 +574,27 @@
       menuList.style.display = 'none';
     }
 
-    const cutButton = document.querySelectorAll('.hide-mobile-button').forEach((el) => {
+//                       Функция скролла после открывания Скрытых характеристик
+const attributes = document.querySelectorAll('.attributes');
 
-      var buttonCoord = document.querySelector('#attributes-button');
-      el.addEventListener('click', () => {
-        displayNone(hidedText)
-        if (buttonCoord.innerHTML === 'Подробнее') {
-          buttonCoord.innerHTML = 'Свернуть'
-        } else buttonCoord.innerHTML = 'Подробнее';
-        setTimeout(() => {
-          scrollTo(buttonCoord, 500)
+attributes.forEach((el) => {
+        const cutButton = el.querySelector('.hide-mobile-button');
+        const hidedText = el.querySelectorAll('.hide-mobile');
+        console.log(hidedText)
+        cutButton.addEventListener('click', () => {
+          setTimeout(() => {
+          scrollTo(cutButton, 500)
         }, 50)
+            hidedText.forEach((el) => {
+              toogleStyleDisplay(el)
+            })
+        })
       })
 
-
-    })
-
-    const cutButtonSecond = document.querySelectorAll('.hide-mobile-button-second').forEach((el) => {
-      let buttonCoordSecond = document.querySelector('#attributes-button-second');
-      el.addEventListener('click', () => {
-        displayNone(hidedTextSecond)
-        if (buttonCoordSecond.innerHTML === 'Подробнее') {
-          buttonCoordSecond.innerHTML = 'Свернуть'
-        } else buttonCoordSecond.innerHTML = 'Подробнее';
-        setTimeout(() => {
-          scrollTo(buttonCoordSecond, 500)
-        }, 50)
-      })
-
-
-    })
-
+//                                                                          Фунуция смены стиля Display
+      function toogleStyleDisplay(el) {
+    el.classList.toggle('hide-mobile')
+      }
 
   </script>
 </body>

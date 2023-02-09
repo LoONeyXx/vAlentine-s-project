@@ -1,20 +1,39 @@
-@media screen and (min-width:768px) {
-  .types {
-    margin: 265px auto 0;
-  }
-  .types__title {
-    text-align: center;
-  }
-  .types__image {
-    -o-object-fit: cover;
-       object-fit: cover;
-    transition: 0.1s linear;
-    max-width: 85%;
-    display: block;
-    margin: 0 auto;
-  }
-  .types__button {
-    margin: 98px auto 0;
-    display: block;
-  }
+.types {
+	margin: 265px auto 0;
+}
+.types__title {
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.2104166667;
+}
+.types__image {
+	-o-object-fit: cover;
+	object-fit: cover;
+	transition: 0.1s linear;
+	max-width: 85%;
+	display: block;
+	margin: 0 auto;
+}
+.types__button {
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+	margin: 98px auto 0;
+	display: block;
+}
+
+@media screen and (max-width: 900px) {
+	.types {
+		margin: 75px auto 0;
+	}
+	.types__title {
+		margin: 0 0 20px 0;
+		text-align: center;
+	}
+	.types__image {
+		max-width: 100%;
+	}
+	.types__button {
+		margin: 77px auto 0;
+	}
 }

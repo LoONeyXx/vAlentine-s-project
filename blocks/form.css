@@ -7,6 +7,8 @@
 	flex-direction: column;
 	border-radius: 20px;
 	margin: 0 auto;
+  min-width: 500px;
+
 	transition: bottom 0.3s linear;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
 }
@@ -17,8 +19,7 @@
 }
 
 .form__label {
-	text-align: center;
-	margin: 10px;
+	margin:20px 0 15px 60px;
 	font-weight: 700;
 	color: whitesmoke;
 	font-size: 18px;
@@ -93,6 +94,7 @@
 		position: relative;
 		appearance: none;
 		z-index: 5;
+    min-width: 300px;
 		background-color: rgba(47, 111, 182, 1);
 		display: flex;
 		flex-direction: column;
@@ -114,6 +116,14 @@
     color: white;
     font-size: 32px;
   }
+
+  
+.form__label {
+	margin:20px 0 15px 40px;
+	font-weight: 700;
+	color: whitesmoke;
+	font-size: 18px;
+}
   
 }
 

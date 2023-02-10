@@ -1,0 +1,28 @@
+.analyzing-table {
+  margin: 0 auto;
+  max-width: 100%;
+  padding-top:100px;
+}
+
+.analyzing-table__image {
+  width: 80%;
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .3s linear;
+}
+
+
+.analyzing-table__title {
+  margin: 0;
+  margin-bottom:45px;
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.2104166667;
+}
+
+

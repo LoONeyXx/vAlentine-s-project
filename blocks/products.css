@@ -1,6 +1,6 @@
 .products {
   display: flex;
-  margin: 263px auto 0;
+  margin: 200px auto 0;
   flex-direction: column;
   align-items: center;
 }
@@ -59,7 +59,7 @@
 @media screen and (max-width:900px) {
   .products {
     display: flex;
-    margin: 144px auto 0;
+    margin: 100px auto 0;
     flex-direction: column;
     align-items: center;
   }

@@ -1,0 +1,102 @@
+.map {
+  padding:50px 20px;
+   margin:0 auto;
+   font-family: 'Inter', Arial, Helvetica, sans-serif;
+   
+ }
+ .map__list {
+   padding:0;
+   display:flex;
+   flex-direction:column;
+   gap:10px;
+   font-size:18px;
+   line-height:1;
+   list-style:none;
+  text-align:center;
+ 
+ 
+ }
+ .map__list li {
+     border:1px solid rgba(0,0,0,0.5);
+   border-radius:10px;
+   padding:15px 10px;
+   background-color: rgb(47, 182, 88);
+   color:white;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+ .map__subtitle {
+   font-size:18px;
+   font-weight:600;
+   max-width:400px;
+   color:rgba(0,0,0,.95);
+   text-align:center;
+   margin:15px auto 20px;
+ }
+ 
+ .map__title {
+   text-align:center;
+   margin:0 auto;
+ }
+ .map__title-zone {
+   max-width:600px;
+   margin:0 auto;
+ }
+ .map__container {
+   display:flex;
+   gap:30px;
+   margin:0 auto;
+   justify-content:center;
+ 
+ }
+ .map__container-title {
+   margin:0 0 20px;
+   text-align:center;
+   font-size:24px;
+   font-weight:700;
+   border-radius:10px;
+   padding:10px 0;
+   width: 100%;
+   border:2px solid rgba(0,0,0,0.7);
+   align-self:center;
+   
+ }
+ 
+ .map__list-title {
+   font-size:32px;
+   font-weight:700;
+   line-height: 1;
+   text-align:center;
+
+ }
+ .map__items {
+   margin:0;
+   padding:0;
+   list-style:none;
+   display:flex;
+   flex-wrap:wrap;
+   font-size:18px;
+   gap:15px;
+ 
+ }
+ .map__item {
+   padding:15px 0;
+   width:150px;
+   border-radius:5px;
+   background-color: rgba(47, 110, 182,1);
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   color:white;
+   flex-grow:1;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .map__column {
+   display:flex;
+   flex-direction:column;
+   max-width:450px;
+   
+ }     

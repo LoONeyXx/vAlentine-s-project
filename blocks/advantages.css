@@ -1,3 +1,6 @@
+.advantages_section_smt {
+	margin-top:100px;
+}
 
 .advantages__title {
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -34,9 +37,6 @@
 
 .advantages__span {
 	font-weight: 700;
-}
-.advantages {
-  margin-top: 150px;
 }
 
 

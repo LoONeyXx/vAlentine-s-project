@@ -2,6 +2,8 @@
 	margin: 265px auto 0;
 }
 .types__title {
+	margin: 0;
+	margin-bottom:15px;
 	font-family: "Inter", Arial, Helvetica, sans-serif;
 	text-align: center;
 	font-size: 24px;
@@ -15,6 +17,7 @@
 	max-width: 85%;
 	display: block;
 	margin: 0 auto;
+	cursor: pointer;
 }
 .types__button {
 	font-family: "Inter", Arial, Helvetica, sans-serif;

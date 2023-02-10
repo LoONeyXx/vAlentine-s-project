@@ -1,5 +1,6 @@
 .button {
 	background-color: #2f6fb6;
+	display:block;
 	border-radius: 100px;
 	width: calc(300px + 64.6 * ((100vw - 320px) / 768));
 	max-width: 100%;
@@ -12,7 +13,7 @@
   background-color: rgba(47, 110, 182,1);
 	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: opacity .2s linear;
+  transition: background-color .2s linear;
 }
 
 @media (hover: hover) {

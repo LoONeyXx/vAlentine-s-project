@@ -4,6 +4,10 @@
 	flex-direction: column;
 	align-items: center;
 }
+.analyzatorVG2 img {
+	object-fit: cover;
+	width: 500px;
+}
 
 .analyzatorVG2__title {
 	font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -16,7 +20,7 @@
 
 .analyzatorVG2__subtitle {
 	font-family: "Inter", Arial, Helvetica, sans-serif;
-	margin: 10px auto 75px;
+	margin: 10px auto 0;
 	text-align: center;
 	max-width: 675px;
 	font-size: 20px;

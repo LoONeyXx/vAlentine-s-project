@@ -129,8 +129,8 @@
 
 	.form__close-btn {
 		position: absolute;
-		top: -45px;
-		right: 5px;
+		top: -55px;
+		right: 0px;
 		display: flex;
 		cursor: pointer;
 		justify-content: center;
